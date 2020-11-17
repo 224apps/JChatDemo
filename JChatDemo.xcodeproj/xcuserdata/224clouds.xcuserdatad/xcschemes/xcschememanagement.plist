@@ -7,7 +7,25 @@
 		<key>JChatDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>13</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>45DC6FB825619652005BA61D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45DC6FCE25619654005BA61D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45DC6FD925619654005BA61D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

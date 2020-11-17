@@ -22,6 +22,8 @@
 		45DC701B2564279E005BA61D /* SignInViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC701A2564279E005BA61D /* SignInViewController+UI.swift */; };
 		45DC703325643143005BA61D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC703225643143005BA61D /* ForgotPasswordViewController.swift */; };
 		45DC703825643176005BA61D /* ForgotViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC703725643176005BA61D /* ForgotViewController+UI.swift */; };
+		45DC703D25643FB6005BA61D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DC703C25643FB6005BA61D /* GoogleService-Info.plist */; };
+		C928C73DBEBAA0FDD0A6C134 /* Pods_JChatDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1019E929451FFA73804231 /* Pods_JChatDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1019E929451FFA73804231 /* Pods_JChatDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JChatDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DC6FB925619652005BA61D /* JChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DC6FBC25619652005BA61D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DC6FBE25619652005BA61D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		45DC701A2564279E005BA61D /* SignInViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+UI.swift"; sourceTree = "<group>"; };
 		45DC703225643143005BA61D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		45DC703725643176005BA61D /* ForgotViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotViewController+UI.swift"; sourceTree = "<group>"; };
+		45DC703C25643FB6005BA61D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		928B0F3AED6BBFB82CDEC63E /* Pods-JChatDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JChatDemo.release.xcconfig"; path = "Target Support Files/Pods-JChatDemo/Pods-JChatDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C4A7266BF9C4F9556FD1EE6E /* Pods-JChatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JChatDemo.debug.xcconfig"; path = "Target Support Files/Pods-JChatDemo/Pods-JChatDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C928C73DBEBAA0FDD0A6C134 /* Pods_JChatDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		058B9FBED01323AE070AC587 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4A7266BF9C4F9556FD1EE6E /* Pods-JChatDemo.debug.xcconfig */,
+				928B0F3AED6BBFB82CDEC63E /* Pods-JChatDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		45DC6FB025619652005BA61D = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,8 @@
 				45DC6FD225619654005BA61D /* JChatDemoTests */,
 				45DC6FDD25619654005BA61D /* JChatDemoUITests */,
 				45DC6FBA25619652005BA61D /* Products */,
+				058B9FBED01323AE070AC587 /* Pods */,
+				929B7B7BF6249B2ACAA89AB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +132,7 @@
 		45DC6FBB25619652005BA61D /* JChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				45DC703C25643FB6005BA61D /* GoogleService-Info.plist */,
 				45DC6FBC25619652005BA61D /* AppDelegate.swift */,
 				45DC6FC025619652005BA61D /* ViewController.swift */,
 				45DC700625636DDF005BA61D /* ViewController+UI.swift */,
@@ -149,6 +169,14 @@
 			path = JChatDemoUITests;
 			sourceTree = "<group>";
 		};
+		929B7B7BF6249B2ACAA89AB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F1019E929451FFA73804231 /* Pods_JChatDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45DC6FE325619654005BA61D /* Build configuration list for PBXNativeTarget "JChatDemo" */;
 			buildPhases = (
+				7E0F23BE30F82A831154066D /* [CP] Check Pods Manifest.lock */,
 				45DC6FB525619652005BA61D /* Sources */,
 				45DC6FB625619652005BA61D /* Frameworks */,
 				45DC6FB725619652005BA61D /* Resources */,
+				0437C993D67584D2B019B48B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DC6FC925619654005BA61D /* LaunchScreen.storyboard in Resources */,
+				45DC703D25643FB6005BA61D /* GoogleService-Info.plist in Resources */,
 				45DC6FF0256198E5005BA61D /* Welcome.storyboard in Resources */,
 				45DC6FC625619654005BA61D /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +304,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0437C993D67584D2B019B48B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JChatDemo/Pods-JChatDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JChatDemo/Pods-JChatDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JChatDemo/Pods-JChatDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E0F23BE30F82A831154066D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JChatDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45DC6FB525619652005BA61D /* Sources */ = {
@@ -453,6 +526,7 @@
 		};
 		45DC6FE425619654005BA61D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4A7266BF9C4F9556FD1EE6E /* Pods-JChatDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +546,7 @@
 		};
 		45DC6FE525619654005BA61D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928B0F3AED6BBFB82CDEC63E /* Pods-JChatDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
