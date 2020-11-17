@@ -68,13 +68,15 @@ extension SignupViewController {
         signupButton.layer.cornerRadius = 5
         signupButton.clipsToBounds = true
     }
+    
     func setupSignInButton(){
-        let attributedTermsText = NSMutableAttributedString(string: "Already have an account?  " , attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor(white: 0, alpha: 0.65)])
+        let attributedTermsText = NSMutableAttributedString(string: "By clicking to \"Create a new account\" you agree to our " , attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor : UIColor(white: 0, alpha: 0.65)])
         
         let attributedSignInText = NSMutableAttributedString(string: "Sign In" , attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14), NSAttributedString.Key.foregroundColor : UIColor(white: 0, alpha:0.65)])
         
         attributedTermsText.append(attributedSignInText)
         signinButton.setAttributedTitle(attributedTermsText, for: .normal)
+        signinButton.titleLabel?.numberOfLines = 0
     }
 }
 
