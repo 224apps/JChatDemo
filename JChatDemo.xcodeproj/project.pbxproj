@@ -10,11 +10,12 @@
 		45DC6FBD25619652005BA61D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FBC25619652005BA61D /* AppDelegate.swift */; };
 		45DC6FBF25619652005BA61D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FBE25619652005BA61D /* SceneDelegate.swift */; };
 		45DC6FC125619652005BA61D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FC025619652005BA61D /* ViewController.swift */; };
-		45DC6FC425619652005BA61D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DC6FC225619652005BA61D /* Main.storyboard */; };
 		45DC6FC625619654005BA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DC6FC525619654005BA61D /* Assets.xcassets */; };
 		45DC6FC925619654005BA61D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DC6FC725619654005BA61D /* LaunchScreen.storyboard */; };
 		45DC6FD425619654005BA61D /* JChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FD325619654005BA61D /* JChatDemoTests.swift */; };
 		45DC6FDF25619654005BA61D /* JChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FDE25619654005BA61D /* JChatDemoUITests.swift */; };
+		45DC6FF0256198E5005BA61D /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DC6FEF256198E5005BA61D /* Welcome.storyboard */; };
+		45DC700725636DDF005BA61D /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC700625636DDF005BA61D /* ViewController+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		45DC6FBC25619652005BA61D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DC6FBE25619652005BA61D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		45DC6FC025619652005BA61D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		45DC6FC325619652005BA61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45DC6FC525619654005BA61D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45DC6FC825619654005BA61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45DC6FCA25619654005BA61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		45DC6FDA25619654005BA61D /* JChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JChatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DC6FDE25619654005BA61D /* JChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JChatDemoUITests.swift; sourceTree = "<group>"; };
 		45DC6FE025619654005BA61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45DC6FEF256198E5005BA61D /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		45DC700625636DDF005BA61D /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				45DC6FBC25619652005BA61D /* AppDelegate.swift */,
-				45DC6FBE25619652005BA61D /* SceneDelegate.swift */,
 				45DC6FC025619652005BA61D /* ViewController.swift */,
-				45DC6FC225619652005BA61D /* Main.storyboard */,
+				45DC700625636DDF005BA61D /* ViewController+UI.swift */,
 				45DC6FC525619654005BA61D /* Assets.xcassets */,
+				45DC6FEF256198E5005BA61D /* Welcome.storyboard */,
 				45DC6FC725619654005BA61D /* LaunchScreen.storyboard */,
+				45DC6FBE25619652005BA61D /* SceneDelegate.swift */,
 				45DC6FCA25619654005BA61D /* Info.plist */,
 			);
 			path = JChatDemo;
@@ -232,8 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DC6FC925619654005BA61D /* LaunchScreen.storyboard in Resources */,
+				45DC6FF0256198E5005BA61D /* Welcome.storyboard in Resources */,
 				45DC6FC625619654005BA61D /* Assets.xcassets in Resources */,
-				45DC6FC425619652005BA61D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +263,7 @@
 			files = (
 				45DC6FC125619652005BA61D /* ViewController.swift in Sources */,
 				45DC6FBD25619652005BA61D /* AppDelegate.swift in Sources */,
+				45DC700725636DDF005BA61D /* ViewController+UI.swift in Sources */,
 				45DC6FBF25619652005BA61D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +300,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45DC6FC225619652005BA61D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45DC6FC325619652005BA61D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		45DC6FC725619654005BA61D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
