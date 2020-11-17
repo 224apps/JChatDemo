@@ -10,21 +10,21 @@ import UIKit
 extension ViewController {
     func setupHeaderTitle() {
         let title = "Create a new account"
-        let subTitle = "\n\n\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
+        let subTitle = "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
         let attributedText = NSMutableAttributedString(string: title,
                                                        attributes: [ NSAttributedString.Key.font : UIFont.init(name: "Didot", size: 28)!,
                                                                      NSAttributedString.Key.foregroundColor: UIColor.black ])
         let attributedSubTitle = NSMutableAttributedString(string: subTitle,
                                                            attributes: [ NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
                                                                          NSAttributedString.Key.foregroundColor: UIColor(white: 0, alpha: 0.45) ])
-        
         attributedText.append(attributedSubTitle)
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing =  10
+        paragraphStyle.lineSpacing =  5
         attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
-        titleLabel.attributedText = attributedText
         titleLabel.numberOfLines = 0
+        titleLabel.attributedText = attributedText
+        
     }
     
     func setupOrLabel(){
@@ -65,5 +65,12 @@ extension ViewController {
         signInGoogleButton.imageView?.contentMode = .scaleAspectFit
         signInGoogleButton.tintColor = .white
         signInGoogleButton.largeContentImageInsets = UIEdgeInsets(top: 12, left: -18, bottom: 12, right: 0)
+    }
+    func setupCreateANewAccount(){
+        createNewAccountButton.setTitle("Create a new Account", for: .normal)
+        createNewAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        createNewAccountButton.backgroundColor = .black
+        createNewAccountButton.layer.cornerRadius = 5
+        createNewAccountButton.clipsToBounds = true
     }
 }

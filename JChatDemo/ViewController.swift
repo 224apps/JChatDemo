@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         setupTermsLabel()
         setupFacebookButton()
         setupGoogleButton()
+        setupCreateANewAccount()
 
     }
         
