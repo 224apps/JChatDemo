@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class SignupViewController: UIViewController {
     
@@ -30,9 +30,6 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    @IBAction func closeButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     func setupUI(){
         setupTitleLabel()
@@ -43,4 +40,23 @@ class SignupViewController: UIViewController {
         setupSignUpButton()
         setupSignInButton()
     }
+    
+    //MARK: - IBActions
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction func signUpButtonDidTapped(_ sender: Any) {
+        Auth.auth().createUser(withEmail: "test@gmail.com", password: "test123") { (authDataResult, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            if let authData = authDataResult {
+                print(authData.user.email!)
+            }
+        }
+    }
+    
 }

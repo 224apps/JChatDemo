@@ -202,6 +202,9 @@
                                     <constraint firstAttribute="height" constant="50" id="6d8-2T-eGz"/>
                                 </constraints>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUpButtonDidTapped:" destination="4HJ-A8-8q5" eventType="touchUpInside" id="4tt-8L-5dy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-eq-3NQ">
                                 <rect key="frame" x="20" y="553" width="374" height="50"/>
@@ -470,7 +473,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GAF-Ll-FPc"/>
         <segue reference="kr0-gp-rRK"/>
     </inferredMetricsTieBreakers>
     <resources>
