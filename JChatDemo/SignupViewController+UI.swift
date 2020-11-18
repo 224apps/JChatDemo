@@ -24,6 +24,9 @@ extension SignupViewController {
     func setupAvatar(){
         avatar.layer.cornerRadius = 40
         avatar.clipsToBounds = true
+        avatar.isUserInteractionEnabled  = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleAvatarTapGesture))
+        avatar.addGestureRecognizer(tapGesture)
     }
     func setupFullNameTextField(){
         fullnameContainerView.layer.borderWidth = 1
@@ -77,6 +80,32 @@ extension SignupViewController {
         attributedTermsText.append(attributedSignInText)
         signinButton.setAttributedTitle(attributedTermsText, for: .normal)
         signinButton.titleLabel?.numberOfLines = 0
+    }
+    
+    //MARK: - Helper Methods
+    
+    @objc func handleAvatarTapGesture(){
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true)
+    }
+}
+
+//MARK: - Extension (UIImagePickerControllerDelegate)
+
+extension SignupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageEditedSelected = info[.editedImage] as? UIImage {
+            avatar.image = imageEditedSelected
+            image = imageEditedSelected
+        }
+        if let imageOriginalSelected = info[.originalImage] as? UIImage {
+            avatar.image = imageOriginalSelected
+            image = imageOriginalSelected
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
