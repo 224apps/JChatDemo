@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import ProgressHUD
 
 extension SignInViewController {
     func setupTitleLabel(){
@@ -57,5 +59,26 @@ extension SignInViewController {
         
         attributedTermsText.append(attributedSignInText)
         signupButton.setAttributedTitle(attributedTermsText, for: .normal)
+    }
+    
+    func validateFields(){
+        guard let email = self.emailTextField.text, !email.isEmpty else {
+            ProgressHUD.showError(ERROR_EMPTY_EMAIL)
+            return
+        }
+        
+        guard let password = self.passwordTextField.text, !password.isEmpty else {
+            ProgressHUD.showError(ERROR_EMPTY_PASSWORD)
+            return
+        }
+    }
+    func signIn(onSuccess: @escaping ()-> Void, onError: @escaping (_ errorMessage: String)->Void){
+        ProgressHUD.show()
+        API.User.signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) {
+            ProgressHUD.dismiss()
+            onSuccess()
+        } onError: { (errorMessage) in
+            onError(errorMessage)
+        }
     }
 }
