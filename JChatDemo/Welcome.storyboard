@@ -296,6 +296,9 @@
                                     <constraint firstAttribute="height" constant="50" id="54n-2G-b04"/>
                                 </constraints>
                                 <state key="normal" title="reset my password"/>
+                                <connections>
+                                    <action selector="resetPasswordDidTapped:" destination="EzM-5g-OhL" eventType="touchUpInside" id="ovi-3d-0PY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-hQ-vRm">
                                 <rect key="frame" x="20" y="20" width="69.5" height="22"/>
@@ -356,9 +359,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-nG-oex">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-nG-oex">
                                 <rect key="frame" x="28" y="423" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <segue destination="4HJ-A8-8q5" kind="show" id="kr0-gp-rRK"/>
@@ -391,13 +393,6 @@
                                     <constraint firstItem="9vL-SC-lIf" firstAttribute="leading" secondItem="Al1-HS-nZP" secondAttribute="leading" constant="20" id="jLJ-Wz-30T"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-Q5-MbH">
-                                <rect key="frame" x="20" y="768" width="374" height="30"/>
-                                <state key="normal" title="Forgot Password"/>
-                                <connections>
-                                    <segue destination="EzM-5g-OhL" kind="show" id="xQ1-Fs-LSg"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzx-ka-Jx7">
                                 <rect key="frame" x="20" y="196" width="374" height="50"/>
                                 <subviews>
@@ -418,21 +413,32 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="czp-hH-Haa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-Q5-MbH">
+                                <rect key="frame" x="20" y="724" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rp2-4D-Oi3"/>
+                                </constraints>
+                                <state key="normal" title="Forgot Password">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EzM-5g-OhL" kind="show" id="sMR-Hz-U1J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Frg-xh-39r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nzm-Q5-MbH" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="0XD-7Z-KtW"/>
                             <constraint firstItem="Dzx-ka-Jx7" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="3Zj-wi-kEn"/>
+                            <constraint firstItem="Frg-xh-39r" firstAttribute="bottom" secondItem="nzm-Q5-MbH" secondAttribute="bottom" constant="54" id="7Kl-go-Jgk"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="7oL-gA-csY"/>
-                            <constraint firstItem="Frg-xh-39r" firstAttribute="bottom" secondItem="nzm-Q5-MbH" secondAttribute="bottom" constant="10" id="AH6-Bd-l2S"/>
                             <constraint firstItem="Al1-HS-nZP" firstAttribute="top" secondItem="vug-pH-jIW" secondAttribute="bottom" constant="80" id="DjF-TP-fQo"/>
                             <constraint firstItem="Al1-HS-nZP" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="KDo-p0-vfg"/>
                             <constraint firstItem="Dzx-ka-Jx7" firstAttribute="top" secondItem="Al1-HS-nZP" secondAttribute="bottom" constant="25" id="P7d-ly-Lj7"/>
-                            <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="nzm-Q5-MbH" secondAttribute="trailing" constant="20" id="PcJ-ce-eXM"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Al1-HS-nZP" secondAttribute="trailing" constant="20" id="Qu8-ju-848"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="top" secondItem="Frg-xh-39r" secondAttribute="top" constant="20" id="UDy-qa-Zt9"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="ZEh-Ct-lSc"/>
+                            <constraint firstItem="nzm-Q5-MbH" firstAttribute="top" secondItem="n7D-nG-oex" secondAttribute="bottom" constant="251" id="eVf-E0-DTi"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Al1-HS-nZP" secondAttribute="trailing" constant="20" id="jGA-c7-jDr"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="nzm-Q5-MbH" secondAttribute="trailing" constant="20" id="kqy-7S-PNc"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Dzx-ka-Jx7" secondAttribute="trailing" constant="20" id="krc-IE-B2c"/>

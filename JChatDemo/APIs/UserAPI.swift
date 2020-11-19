@@ -18,7 +18,6 @@ class UserAPI {
                 return
             }
             onSuccess()
-            print(authData?.user.email)
         }
     }
     func signUp(withUsername username: String, email: String, password: String, image: UIImage?,
@@ -59,6 +58,16 @@ class UserAPI {
                                             onError(errorMessage)
                                          })
             }
+        }
+    }
+    
+    func resetPassword(WithEmail email: String, onSuccess: @escaping ()-> Void, onError: @escaping (_ errorMessage: String)->Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if error != nil {
+                onError(error!.localizedDescription)
+            }
+            onSuccess()
+            print("Done")
         }
     }
 }
