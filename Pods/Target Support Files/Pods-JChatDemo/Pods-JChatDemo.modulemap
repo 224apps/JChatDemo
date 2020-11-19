@@ -1,0 +1,6 @@
+framework module Pods_JChatDemo {
+  umbrella header "Pods-JChatDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

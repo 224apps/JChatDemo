@@ -359,16 +359,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-nG-oex">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-nG-oex">
                                 <rect key="frame" x="28" y="423" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mWx-4x-Rsz"/>
+                                </constraints>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <segue destination="4HJ-A8-8q5" kind="show" id="kr0-gp-rRK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-Fi-Ynv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-Fi-Ynv">
                                 <rect key="frame" x="28" y="343" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h4l-q1-uNw"/>
+                                </constraints>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="signInButtonDidTapped:" destination="RzB-1e-5oq" eventType="touchUpInside" id="SXQ-S1-Cet"/>
@@ -429,16 +434,22 @@
                         <viewLayoutGuide key="safeArea" id="Frg-xh-39r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KDE-Fi-Ynv" firstAttribute="top" secondItem="Dzx-ka-Jx7" secondAttribute="bottom" constant="97" id="0I5-cf-L7T"/>
                             <constraint firstItem="Dzx-ka-Jx7" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="3Zj-wi-kEn"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="bottom" secondItem="nzm-Q5-MbH" secondAttribute="bottom" constant="54" id="7Kl-go-Jgk"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="7oL-gA-csY"/>
                             <constraint firstItem="Al1-HS-nZP" firstAttribute="top" secondItem="vug-pH-jIW" secondAttribute="bottom" constant="80" id="DjF-TP-fQo"/>
+                            <constraint firstItem="n7D-nG-oex" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="28" id="HaK-EN-3r7"/>
+                            <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="n7D-nG-oex" secondAttribute="trailing" constant="12" id="J8I-gu-83n"/>
                             <constraint firstItem="Al1-HS-nZP" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="KDo-p0-vfg"/>
+                            <constraint firstItem="KDE-Fi-Ynv" firstAttribute="leading" secondItem="n7D-nG-oex" secondAttribute="leading" id="MP8-A7-Fvy"/>
                             <constraint firstItem="Dzx-ka-Jx7" firstAttribute="top" secondItem="Al1-HS-nZP" secondAttribute="bottom" constant="25" id="P7d-ly-Lj7"/>
+                            <constraint firstItem="n7D-nG-oex" firstAttribute="top" secondItem="KDE-Fi-Ynv" secondAttribute="bottom" constant="30" id="Pd6-nv-HhX"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Al1-HS-nZP" secondAttribute="trailing" constant="20" id="Qu8-ju-848"/>
+                            <constraint firstItem="KDE-Fi-Ynv" firstAttribute="trailing" secondItem="n7D-nG-oex" secondAttribute="trailing" id="REl-oO-a86"/>
+                            <constraint firstAttribute="bottom" secondItem="n7D-nG-oex" secondAttribute="bottom" constant="369" id="S3c-8A-4dZ"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="top" secondItem="Frg-xh-39r" secondAttribute="top" constant="20" id="UDy-qa-Zt9"/>
                             <constraint firstItem="vug-pH-jIW" firstAttribute="leading" secondItem="Frg-xh-39r" secondAttribute="leading" constant="20" id="ZEh-Ct-lSc"/>
-                            <constraint firstItem="nzm-Q5-MbH" firstAttribute="top" secondItem="n7D-nG-oex" secondAttribute="bottom" constant="251" id="eVf-E0-DTi"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Al1-HS-nZP" secondAttribute="trailing" constant="20" id="jGA-c7-jDr"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="nzm-Q5-MbH" secondAttribute="trailing" constant="20" id="kqy-7S-PNc"/>
                             <constraint firstItem="Frg-xh-39r" firstAttribute="trailing" secondItem="Dzx-ka-Jx7" secondAttribute="trailing" constant="20" id="krc-IE-B2c"/>
