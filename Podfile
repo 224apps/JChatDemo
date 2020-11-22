@@ -11,6 +11,7 @@ target 'JChatDemo' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'ProgressHUD'
+  pod 'SDWebImage'
   
   # https://firebase.google.com/docs/ios/setup#available-pods
   post_install do |installer|

@@ -13,17 +13,15 @@ class PeopleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print( Ref().databaseRoot.description())
-        print( Ref().databaseUsers.description())
-        Ref().databaseUsers.observe(.childAdded) { (snapshot, _) in
-            if let dict  = snapshot.value as? [String: Any] {
-                if let user = User.transformUser(dict: dict){
-                    self.users.append(user)
-                }
-            }
-        }
         
-        print(self.users)
+        ObserveUsers()
+    }
+    
+    func  ObserveUsers(){
+        API.User.observeUsers { (user) in
+            self.users.append(user)
+            self.tableView.reloadData()
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

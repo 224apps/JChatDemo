@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserTableViewCell: UITableViewCell {
 
@@ -16,11 +17,14 @@ class UserTableViewCell: UITableViewCell {
     func loadData(_ user: User){
         self.usernameLabel.text = user.username
         self.statusLabel.text = user.status
-        self.avatar.image = UIImage(named: "taylor_swift")
+        self.avatar.loadImage(user.profileImageUrl)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        avatar.layer.cornerRadius  = 30
+        avatar.clipsToBounds = true 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

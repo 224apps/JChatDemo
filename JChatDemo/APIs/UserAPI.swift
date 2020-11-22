@@ -9,6 +9,7 @@ import UIKit
 import ProgressHUD
 import Firebase
 
+
 class UserAPI {
     
     func signIn(withEmail email: String, password: String,onSuccess: @escaping ()-> Void, onError: @escaping (_ errorMessage: String)->Void){
@@ -44,7 +45,7 @@ class UserAPI {
                 guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else { return }
                 
                 let storageProfile = Ref().storageSpecificProfile(uid: authData.user.uid)
-    
+                
                 let metadata = StorageMetadata()
                 metadata.contentType = "image/jpg"
                 
@@ -80,4 +81,17 @@ class UserAPI {
         }
         (UIApplication.shared.delegate as! AppDelegate).configureInitialVC()
     }
+    
+    func observeUsers(onSuccess: @escaping(UserCompletion) ){
+        Ref().databaseUsers.observe(.childAdded) { (snapshot, _) in
+            if let dict  = snapshot.value as? [String: Any] {
+                if let user = User.transformUser(dict: dict){
+                    onSuccess(user)
+                }
+            }
+        }
+    }
 }
+
+
+typealias UserCompletion = (User) -> Void

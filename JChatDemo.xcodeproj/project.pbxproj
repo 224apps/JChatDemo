@@ -16,6 +16,7 @@
 		45A4C9302567071F007DABB8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A4C92F2567071F007DABB8 /* UserTableViewCell.swift */; };
 		45A4C95325688139007DABB8 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A4C95225688139007DABB8 /* ProfileTableViewController.swift */; };
 		45A4C965256A2053007DABB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A4C964256A2053007DABB8 /* User.swift */; };
+		45A4C983256A25A6007DABB8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A4C982256A25A6007DABB8 /* Extension.swift */; };
 		45DC6FBD25619652005BA61D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FBC25619652005BA61D /* AppDelegate.swift */; };
 		45DC6FC125619652005BA61D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6FC025619652005BA61D /* ViewController.swift */; };
 		45DC6FC625619654005BA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DC6FC525619654005BA61D /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		45A4C92F2567071F007DABB8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		45A4C95225688139007DABB8 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		45A4C964256A2053007DABB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45A4C982256A25A6007DABB8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		45DC6FB925619652005BA61D /* JChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DC6FBC25619652005BA61D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DC6FC025619652005BA61D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		45A4C981256A2596007DABB8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45A4C982256A25A6007DABB8 /* Extension.swift */,
+			);
+			name = Helpers;
+			path = Models;
+			sourceTree = "<group>";
+		};
 		45DC6FB025619652005BA61D = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +244,7 @@
 				45DC700625636DDF005BA61D /* ViewController+UI.swift */,
 				45DC6FC525619654005BA61D /* Assets.xcassets */,
 				45DC6FEF256198E5005BA61D /* Welcome.storyboard */,
+				45A4C981256A2596007DABB8 /* Helpers */,
 				45A4C963256A203A007DABB8 /* Models */,
 				45A4C92E256706DA007DABB8 /* Me */,
 				45A4C92525670586007DABB8 /* Users */,
@@ -461,6 +473,7 @@
 				45A4C91E2566F780007DABB8 /* MessageTableViewController.swift in Sources */,
 				45DC701125641E06005BA61D /* SignupViewController+UI.swift in Sources */,
 				45A4C88425655760007DABB8 /* StorageService.swift in Sources */,
+				45A4C983256A25A6007DABB8 /* Extension.swift in Sources */,
 				45DC703325643143005BA61D /* ForgotPasswordViewController.swift in Sources */,
 				45A4C965256A2053007DABB8 /* User.swift in Sources */,
 				45DC700C25637083005BA61D /* SignupViewController.swift in Sources */,
