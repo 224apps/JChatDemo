@@ -54,8 +54,7 @@ class SignupViewController: UIViewController {
         self.validateFields()
         self.signUp {
             //Switch view
-            
-            
+            (UIApplication.shared.delegate as! AppDelegate).configureInitialVC()
         } onError: { (errorMessage) in
             ProgressHUD.showError(errorMessage)
         }

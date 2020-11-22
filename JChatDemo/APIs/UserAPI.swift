@@ -70,4 +70,14 @@ class UserAPI {
             print("Done")
         }
     }
+    
+    func logOut(){
+        do {
+            try Auth.auth().signOut()
+        } catch  {
+            ProgressHUD.showError(error.localizedDescription)
+            return 
+        }
+        (UIApplication.shared.delegate as! AppDelegate).configureInitialVC()
+    }
 }

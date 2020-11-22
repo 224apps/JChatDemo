@@ -41,6 +41,5 @@ class ForgotPasswordViewController: UIViewController {
         } onError: { (errorMessage) in
             ProgressHUD.showError(errorMessage)
         }
-
     }
 }

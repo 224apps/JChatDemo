@@ -24,6 +24,12 @@ let ERROR_EMPTY_USERNAME = "Please enter an username"
 let ERROR_EMPTY_PASSWORD = "Please enter a passowrd"
 let ERROR_EMPTY_EMAIL_RESET  = "Please enter an email address for password reset"
 let SUCCESS_EMAIL_RESET = "We have just sent you a password reset email. Please, check your inbox and follow the instructions."
+let IDENTIFIER_TABBAR_VC = "TabBarVC"
+let IDENTIFIER_WELCOME_VC = "WelcomeVC"
+let IDENTIFIER_CELL_USERS = "UserTableViewCell"
+let IDENTIFIER_CELL_PEOPLE = "PeopleTableViewCell"
+let IDENTIFIER_CELL_PROFILE = "ProfileTableViewCell"
+
 
 class Ref {
     
